@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="hovstyle.css">
+  </head>
+  <body>
+<nav>
+  <ul>
+    <p>Himachal Tourism</p>
+     <li><a href="home.html">Home</a></li>
+     <li><a href="destinations.html">Destinations</a></li>
+     <li><a href="bookings.html"> Travel bookings</a>
+       <ul>
+         <li><a href="https://www.olacabs.com/" target="_blank">car</a></li>
+         <li><a href="https://paytm.com/bus-tickets" target="_blank">bus</a></li>
+         <li><a href="https://paytm.com/train-tickets" target="_blank">Trains </a></li>
+         <li><a href="https://paytm.com/flights" target="_blank">Flights </a></li>
+       </ul>
+     </li>
+     <li><a href="hotels.html">Where to Stay</a></li>
+     <li><a href="aboutus.html">About</a></li>
+        <li><a href="Contact.html">Contact us</a></li>
+        <p>Toll Free Number : 1800 8333 010</p>
+  </ul>
+</nav>
+  <main>
+  	<br><br><br><br>
+    <div id=signup><center><table id="tab1" border="5px">
+  <tr><th colspan="4"><h2>Details</h2></a></th>
+  <th colspan="4"><h2>T&C</h2></a></th></tr>
+  </tr><tr>
+  <th colspan="4" style="text-align:left;">Name</th>
+  <th colspan="4"><input type="text" placeholder="Full name" id="name" required></th>
+  </tr>
+  <tr>
+  <th colspan="4" style="text-align:left;">Email Address</th>
+  <th colspan="4"><input type="text" placeholder="Your Email" id="email" required></th>
+</tr>
+  <tr><th colspan="4" style="text-align:left;">Gender</th>
+  <th colspan="4"><input type="radio" name="gender" value="Male" checked="checked">Male
+  <input type="radio" name="gender" value="Female">Female</th>
+  </tr>
+  <tr><th colspan="4" style="text-align:left;">Age</th>
+  <th colspan="4"><input type="text" id="age" required></th></tr>
+  <tr>
+  <th colspan="4" style="text-align:left;">Password</th>
+  <th colspan="4"><input type="text" id="pass1" required></th>
+  </tr>
+  <tr>
+  <th colspan="4" style="text-align:left;">Confirm Password</th>
+  <th colspan="4"><input type="text" id="pass2" required></th>
+  </tr>
+  <tr>
+  <th colspan="4" style="text-align:left;">Location</th>
+  <th colspan="4"><select id="dropdown">
+      <option value="30">Choose holiday destination</option>
+      <option value="a">Shimla</option>
+      <option value="b">manali</option>
+      <option value="c">Dharamshala</option>
+      <option value="d">Dal housie</option>
+      <option value="e">Mandi</option>
+      <option value="f">Solan</option>
+      <option value="g">Spiti valley</option>
+      <option value="h">kullu</option>
+      <option value="i">Other</option>
+      </select>
+      </th>
+      </tr>
+</table></center></div>
+<br>
+<br><form Onsubmit="fun()">
+<input type="submit" id="sub-button" value="Submit" style="float:right; margin-right:492px;">
+</form>
+<script>
+function fun()
+{
+  var A=document.getElementById("name").value;
+  var B=document.getElementById("email").value;
+  if(A==0)
+  {
+  alert("Please Enter Name");
+  return false;
+  }
+  else if(B==0)
+  {
+  alert("Please Enter email address");
+  return false;
+  }
+  else
+  {fun2();}
+}
+function fun2()
+{
+  var C=document.getElementById("age").value;
+  var D=document.getElementById("pass1").value;
+  var E=document.getElementById("pass2").value;
+  if(C<0||isNaN(C))
+  {
+  alert("Enter a valid age");
+  return false;
+  }
+  else if(D!=E)
+  {
+    if(D==0)
+    {
+    alert("Enter password");
+    return false;
+    }
+    else
+    {
+    alert("Your Passwords didn't match");
+    return false;
+    }
+  }
+  else
+  {fun3();}
+}
+function fun3()
+{
+  var D=document.getElementById("pass1").value;
+  var E=document.getElementById("pass2").value;
+  var F=document.getElementById("dropdown").value;
+        if(F==30)
+  {
+  alert("May You Forgot TO Select Your Location");
+  return false;
+  }
+  else
+  {alert("Successfully submitted");
+  return true;}
+}
+</script>
+    </main>
+<br><br><br><br>
+    <div class="footer-style">
+<footer>Copyright &copy; Himachal Tourism</footer>
+</div>
+    
+  </body>
+</html>
+
